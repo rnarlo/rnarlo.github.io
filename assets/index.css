@@ -60,14 +60,12 @@ main {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  margin-top: -8em;
-  margin-bottom: 8em;
 }
 
 .mypic {
   margin-top: 25px;
   height: 12rem;
-  width: auto;
+  width: 12rem;
   border-radius: 50%;
   border: 2px solid var(--text-one);
 }
@@ -137,12 +135,10 @@ main {
 }
 
 .arrow {
-  position: relative;
-  top: 25vh;
+  margin-top: 10em;
   font-size: 1.8em;
   color: var(--aurora-three);
   animation: fade-in-d 2s infinite ease-in-out;
-  opacity: 0;
 }
 
 .education {
