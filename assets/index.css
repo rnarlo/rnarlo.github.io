@@ -64,12 +64,10 @@ main {
   margin-bottom: 8em;
 }
 
-.picture {
-}
-
 .mypic {
   margin-top: 25px;
   height: 12rem;
+  width: auto;
   border-radius: 50%;
   border: 2px solid var(--text-one);
 }
@@ -153,7 +151,6 @@ main {
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: auto;
   background-color: var(--background-color-two);
 }
 
