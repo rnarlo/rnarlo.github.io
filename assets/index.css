@@ -145,12 +145,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 100vw;
   background-color: var(--background-color-two);
 }
 
 .education > h1 {
+  text-align: center;
+  width: 5em;
   font-family: var(--font-fam-1);
   color: var(--text-one);
   font-size: calc(2em + 0.5vw);
