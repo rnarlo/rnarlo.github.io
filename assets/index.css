@@ -64,8 +64,8 @@ main {
 
 .picture {
   display: flex;
-  position: absolute;
-  top: 8.2em;
+  position: relative;
+  top: -2em;
 }
 
 .mypic {
@@ -122,8 +122,8 @@ main {
   justify-content: center;
   width: 50em;
   max-width: 90vw;
-  position: absolute;
-  margin-top: 30px;
+  position: relative;
+  margin-top: -30px;
 }
 
 .typewrite {
