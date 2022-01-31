@@ -65,7 +65,7 @@ main {
 .picture {
   display: flex;
   position: relative;
-  top: -2em;
+  top: -8em;
 }
 
 .mypic {
@@ -81,6 +81,7 @@ main {
   font-weight: bolder;
   font-size: calc(2em + 2vw);
   position: relative;
+  top: -1.5em;
   animation-fill-mode: forwards;
 }
 
@@ -94,6 +95,8 @@ main {
 
 .socials {
   display: inline-flex;
+  position: relative;
+  top: -6em;
   margin-bottom: 0;
 }
 
@@ -123,7 +126,7 @@ main {
   width: 50em;
   max-width: 90vw;
   position: relative;
-  margin-top: -30px;
+  margin-top: -9em;
 }
 
 .typewrite {
