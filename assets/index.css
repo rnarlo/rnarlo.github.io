@@ -76,6 +76,7 @@ main {
   font-weight: bolder;
   font-size: calc(2em + 2vw);
   animation-fill-mode: forwards;
+  margin-top: 0.75em;
 }
 
 .outline {
@@ -114,7 +115,7 @@ main {
 .about1 {
   display: flex;
   justify-content: center;
-  width: 50em;
+  width: 45em;
   max-width: 90vw;
 }
 
