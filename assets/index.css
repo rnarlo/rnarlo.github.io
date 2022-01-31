@@ -1,0 +1,222 @@
+/* Written by Chris Jimenez */
+
+@font-face {
+  font-family: Titillium;
+  src: url("fonts/TitilliumWeb-Regular.ttf");
+}
+
+@font-face {
+  font-family: DMMono;
+  src: url("fonts/DMMono-Regular.ttf");
+}
+
+:root {
+  --text-one: #ECEFF4;
+  --frost-one: #5E81AC;
+  --frost-two: #81A1C1;
+  --frost-three: #88C0D0;
+  --aurora-three: #BF616A;
+  --background-color-one: #2E3440;
+  --background-color-two: #262C37;
+  --font-fam-1: "Titillium", sans-serif;
+  --font-fam-2: "DMMono", monospace;
+  --font-fam-3: "Inter", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /*Inter is from the Rhythm bot website. Huge thanks to them!*/
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -moz-tap-highlight-color: transparent;
+  -o-background-size: cover;
+  -o-tap-highlight-color: transparent;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color-one);
+}
+
+main {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.picture {
+  display: flex;
+  position: absolute;
+  top: 8.2em;
+}
+
+.mypic {
+  margin-top: 25px;
+  height: 12rem;
+  border-radius: 50%;
+  border: 2px solid var(--text-one);
+}
+
+.name {
+  font-family: var(--font-fam-3);
+  color: var(--text-one);
+  font-weight: bolder;
+  font-size: calc(2em + 2vw);
+  position: relative;
+  animation-fill-mode: forwards;
+}
+
+.outline {
+  color: var(--background-color-one) !important;
+  text-shadow: -1px 1px 0 var(--aurora-three),
+  1px 1px 0 var(--aurora-three),
+  1px -1px 0 var(--aurora-three),
+  -1px -1px 0 var(--aurora-three);
+}
+
+.socials {
+  display: inline-flex;
+  margin-bottom: 0;
+}
+
+.socials > a {
+  margin: 0px 20px;
+  text-decoration: none;
+  font-family: var(--font-fam-3);
+  transition: 0.5s;
+  color: var(--aurora-three);
+  font-size: 1em;
+  font-weight: 120;
+}
+
+.socials > a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: rgba(255,2555,255,0.6);
+  position: relative;
+  transition: all ease-in-out 300ms;
+  width: 0;
+}
+
+.about1 {
+  display: flex;
+  justify-content: center;
+  width: 50em;
+  max-width: 90vw;
+  position: absolute;
+  margin-top: 30px;
+}
+
+.typewrite {
+  color: var(--text-one);
+  text-decoration: none;
+  font-size: 2em;
+  font-family: var(--font-fam-1);
+  max-width: 90vw;
+  text-align: center;
+  font-weight: lighter;
+  position: absolute;
+}
+
+.typewrite > .wrap::after {
+  content: "|";
+  animation: blink 500ms linear infinite alternate;
+}
+
+.arrow {
+  position: relative;
+  top: 25vh;
+  font-size: 1.8em;
+  color: var(--aurora-three);
+  animation: fade-in-d 2s infinite ease-in-out;
+  opacity: 0;
+}
+
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  background-color: var(--background-color-two);
+}
+
+.education > h1 {
+  font-family: var(--font-fam-1);
+  color: var(--text-one);
+  font-size: calc(2em + 0.5vw);
+  border-bottom: var(--text-one) 1.2px solid;
+}
+
+.aboutEdu {
+  width: 45em;
+  max-width: 90vw;
+  color: var(--text-one);
+  font-family: var(--font-fam-3);
+  font-size: calc(1em + 0.5vw);
+  text-align: justify;
+}
+
+.aboutEdu > p > a {
+  text-decoration: none;
+}
+
+.uplb {
+  color: var(--aurora-three);
+}
+
+@-webkit-keyframes blink {
+  0%{opacity: 0;};
+  100%{opacity: 1;};
+}
+
+@-moz-keyframes blink {
+  0%{opacity: 0;};
+  100%{opacity: 1;};
+}
+
+@keyframes blink {
+  0%{opacity: 0;};
+  100%{opacity: 1;};
+}
+
+@keyframes fade-in-d {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 25%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+}
+
+@media (hover: hover) {
+  .socials > a:hover::after{
+    width: 100%;
+  }
+}
