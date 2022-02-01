@@ -33,19 +33,17 @@ html {
   -o-background-size: cover;
   -o-tap-highlight-color: transparent;
   background-size: cover;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color-one);
-}
-
-main {
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  align-content: center;
 }
 
 .break {
@@ -67,7 +65,7 @@ main {
   height: 12rem;
   width: 12rem;
   border-radius: 50%;
-  border: 2px solid var(--text-one);
+  border: 2px solid rgba(255,2555,255,0.5)
 }
 
 .name {
@@ -89,7 +87,6 @@ main {
 
 .socials {
   display: inline-flex;
-  margin-bottom: 0;
 }
 
 .socials > a {
@@ -124,6 +121,7 @@ main {
   text-decoration: none;
   font-size: 2em;
   font-family: var(--font-fam-1);
+  width: 45em;
   max-width: 90vw;
   text-align: center;
   font-weight: lighter;
@@ -146,8 +144,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100vw;
+  flex-direction: column;
+  width: 100%;
   background-color: var(--background-color-two);
 }
 
