@@ -61,7 +61,6 @@ body {
 }
 
 .mypic {
-  margin-top: 25px;
   height: 12rem;
   width: 12rem;
   border-radius: 50%;
@@ -72,9 +71,9 @@ body {
   font-family: var(--font-fam-3);
   color: var(--text-one);
   font-weight: bolder;
-  font-size: calc(2em + 2vw);
+  font-size: 6em;
   animation-fill-mode: forwards;
-  margin-top: 1em;
+  margin-top: 0.65em;
 }
 
 .outline {
@@ -234,6 +233,7 @@ body {
 
   .name {
     margin-top: 1.7em;
+    font-size: 3em;
   }
 
   .socials > a {
