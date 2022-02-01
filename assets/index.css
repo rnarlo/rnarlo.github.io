@@ -165,8 +165,9 @@ main {
   max-width: 90vw;
   color: var(--text-one);
   font-family: var(--font-fam-3);
-  font-size: calc(1em + 0.5vw);
-  text-align: justify;
+  font-weight: lighter;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .aboutEdu > p > a {
