@@ -76,7 +76,7 @@ main {
   font-weight: bolder;
   font-size: calc(2em + 2vw);
   animation-fill-mode: forwards;
-  margin-top: 0.75em;
+  margin-top: 1em;
 }
 
 .outline {
@@ -98,7 +98,7 @@ main {
   font-family: var(--font-fam-3);
   transition: 0.5s;
   color: var(--aurora-three);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 120;
 }
 
@@ -153,11 +153,19 @@ main {
 
 .education > h1 {
   text-align: center;
-  width: 5em;
+  width: auto;
   font-family: var(--font-fam-1);
   color: var(--text-one);
   font-size: calc(2em + 0.5vw);
-  border-bottom: var(--text-one) 1.2px solid;
+}
+
+.education > h1::after {
+  content: "";
+  display: block;
+  height: 1.2px;
+  background-color: rgba(255,2555,255,0.6);
+  position: relative;
+  width: 100%;
 }
 
 .aboutEdu {
@@ -172,6 +180,7 @@ main {
 
 .aboutEdu > p > a {
   text-decoration: none;
+  transition: 300ms;
 }
 
 .uplb {
@@ -211,5 +220,30 @@ main {
 @media (hover: hover) {
   .socials > a:hover::after{
     width: 100%;
+  }
+  
+  .aboutEdu > p > a:hover {
+    background-color: rgba(255,255,255,0.03);
+  }
+}
+
+  /* For phones */
+@media screen and (max-width: 889px) {
+  .upper {
+    margin-top: -2em;
+    margin-bottom: 2em;
+  }
+
+  .name {
+    margin-top: 1.7em;
+  }
+
+  .socials > a {
+    font-size: 1em;
+  }
+
+  .mypic {
+    height: 10em;
+    width: 10em;
   }
 }
