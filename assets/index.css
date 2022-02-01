@@ -136,7 +136,7 @@ main {
 }
 
 .arrow {
-  margin-top: 10em;
+  margin-top: 8em;
   font-size: 1.8em;
   color: var(--aurora-three);
   animation: fade-in-d 2s infinite ease-in-out;
