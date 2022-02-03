@@ -40,6 +40,11 @@ html {
 }
 
 * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
   box-sizing: border-box;
 }
 
@@ -47,15 +52,35 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color-one);
+  display: block;
 }
 
-/* .footer {
+.footer {
   width: 100%;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: auto;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
   height: 8vh;
   background-color: var(--background-color-two);
-  position: absolute;
-  bottom: 0;
-} */
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content > p {
+  color: var(--text-one);
+  font-family: var(--font-fam-3);
+  font-weight: normal;
+  font-size: 0.5em;
+}
 
 .break {
   flex-basis: 100%;
@@ -74,8 +99,8 @@ body {
 
 .education, .footer {
   box-shadow: 
-  inset 0px 8px 0.3em -8px #000,
-  inset 0px -8px 0.3em -8px #000; 
+  inset 0px 6px 0.3em -8px #000,
+  inset 0px -6px 0.3em -8px #000; 
 }
 
 .mypic {
@@ -113,7 +138,7 @@ body {
   transition: 0.5s;
   color: var(--aurora-three);
   font-size: 1.2em;
-  font-weight: 120;
+  font-weight: normal;
 }
 
 .socials > a::after {
@@ -126,7 +151,7 @@ body {
   width: 0;
 }
 
-.about1 {
+.about {
   display: flex;
   justify-content: center;
   width: 45em;
@@ -174,183 +199,193 @@ body {
   font-size: calc(2em + 0.5vw);
 }
 
-.education > h1::after, .projects > h1::after {
+.education > h1 {
+    /* Code from Harvard! :)*/
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),color-stop(66%,rgba(255,255,255,0)),color-stop(66%,rgba(191, 97, 106, 0.6)),color-stop(85%,rgba(191, 97, 106, 0.6)),color-stop(85%,rgba(255,255,255,0)));
+}
+
+.projects > h1 {
+  /* Code from Harvard! :)*/
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),color-stop(66%,rgba(255,255,255,0)),color-stop(66%,rgba(163, 190, 140, 0.6)),color-stop(85%,rgba(163, 190, 140, 0.6)),color-stop(85%,rgba(255,255,255,0)));
+}
+
+/* .education > h1::after, .projects > h1::after {
   content: "";
   display: block;
-  height: 1.2px;
+  height: 9px;
   background-color: rgba(255,2555,255,0.6);
   position: relative;
-  width: 100%;
-}
-
-.aboutEdu, .projectsDescription {
-  width: 45em;
-  max-width: 90vw;
-  color: var(--text-one);
-  font-family: var(--font-fam-3);
-  font-weight: lighter;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.aboutEdu > p > a {
-  text-decoration: none;
-  transition: 300ms;
-}
-
-.uplb {
-  color: var(--aurora-three);
-}
-
-.projects {
-  /* border: 1px solid white; */
-  height: auto;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.projectsList {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  height: auto;
-  flex-direction: row;
-  height: auto;
-  padding-bottom: 5vh;
-}
-
-.projectsList > * {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: flex-start;
-  height: auto;
-  width: calc(100%/3);
-  /* border: 1px solid white; */
-  flex: 30em;
-  overflow: hidden;
-}
-
-.projectsList > * > h2 {
-  font-family: var(--font-fam-2);
-  color: var(--aurora-one) !important;
-  font-weight: normal;
-  font-size: 2.2em;
-}
-
-.aboutProject {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 90%;
-  max-width: 90vw;
-  color: var(--text-one);
-  font-family: var(--font-fam-3);
-  font-weight: lighter;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-.link { 
-  width: auto;
-}
-
-.link > a {
-  text-decoration: none;
-  color: var(--aurora-one);
-  opacity: 0.8;
-  font-weight: normal;
-}
-
-.link > a::after {
-  content: "";
-  display: block;
-  height: 2px;
-  background-color: rgba(255,2555,255,0.6);
-  position: relative;
-  transition: all ease-in-out 300ms;
-  width: 0;
-}
-
-.mobileBreak {
-  width: 45em;
-  max-width: 60vw;
-  background-color: var(--text-one);
-  opacity: 0.3;
-  margin-top: 2.2em;
-  margin-bottom: 1em;
-  display: none;
-}
-
-@-webkit-keyframes blink {
-  0%{opacity: 0;};
-  100%{opacity: 1;};
-}
-
-@-moz-keyframes blink {
-  0%{opacity: 0;};
-  100%{opacity: 1;};
-}
-
-@keyframes blink {
-  0%{opacity: 0;};
-  100%{opacity: 1;};
-}
-
-@keyframes fade-in-d {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
+  width: 100%; */
+  /* } */
+  
+  .aboutEdu, .projectsDescription {
+    width: 45em;
+    max-width: 90vw;
+    color: var(--text-one);
+    font-family: var(--font-fam-3);
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: center;
   }
-  50% {
-    opacity: 1;
-    transform: translate3d(0, 25%, 0);
+  
+  .aboutEdu > p > a {
+    text-decoration: none;
+    transition: 300ms;
   }
-  100% {
-    opacity: 0;
-    transform: translate3d(0, 50%, 0);
+  
+  .uplb {
+    color: var(--aurora-three);
   }
-}
-
-@media (hover: hover) {
-  .socials > a:hover::after, .link > a:hover::after{
+  
+  .projects {
+    /* border: 1px solid white; */
+    height: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .projectsList {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 100%;
+    height: auto;
+    flex-direction: row;
+    height: auto;
+    padding-bottom: 5vh;
   }
   
-  .aboutEdu > p > a:hover {
-    background-color: rgba(255,255,255,0.03);
-  }
-}
-
-/* For phones */
-@media screen and (max-width: 889px) {
-  .upper {
-    margin-top: -2em;
-    margin-bottom: 2em;
-  }
-  
-  .name {
-    margin-top: 1.7em;
-    font-size: 3em;
+  .projectsList > * {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    height: auto;
+    width: calc(100%/3);
+    /* border: 1px solid white; */
+    flex: 30em;
+    overflow: hidden;
   }
   
-  .socials > a {
-    font-size: 1em;
+  .projectsList > * > h2 {
+    font-family: var(--font-fam-2);
+    color: var(--aurora-one) !important;
+    font-weight: normal;
+    font-size: 2.2em;
   }
   
-  .mypic {
-    height: 10em;
-    width: 10em;
+  .aboutProject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 90vw;
+    color: var(--text-one);
+    font-family: var(--font-fam-3);
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .link { 
+    width: auto;
+  }
+  
+  .link > a {
+    text-decoration: none;
+    color: var(--aurora-one);
+    opacity: 0.8;
+    font-weight: normal;
+  }
+  
+  .link > a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: rgba(255,2555,255,0.6);
+    position: relative;
+    transition: all ease-in-out 300ms;
+    width: 0;
   }
   
   .mobileBreak {
-    display: block;
+    width: 45em;
+    max-width: 60vw;
+    background-color: var(--text-one);
+    opacity: 0.3;
+    margin-top: 2.2em;
+    margin-bottom: 1em;
+    display: none;
   }
   
-}
+  @-webkit-keyframes blink {
+    0%{opacity: 0;};
+    100%{opacity: 1;};
+  }
+  
+  @-moz-keyframes blink {
+    0%{opacity: 0;};
+    100%{opacity: 1;};
+  }
+  
+  @keyframes blink {
+    0%{opacity: 0;};
+    100%{opacity: 1;};
+  }
+  
+  @keyframes fade-in-d {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      opacity: 1;
+      transform: translate3d(0, 25%, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(0, 50%, 0);
+    }
+  }
+  
+  @media (hover: hover) {
+    .socials > a:hover::after, .link > a:hover::after{
+      width: 100%;
+    }
+    
+    .aboutEdu > p > a:hover {
+      background-color: rgba(255,255,255,0.03);
+    }
+  }
+  
+  /* For phones */
+  @media screen and (max-width: 889px) {
+    .upper {
+      margin-top: -2em;
+      margin-bottom: 2em;
+    }
+    
+    .name {
+      margin-top: 1.7em;
+      font-size: 3em;
+    }
+    
+    .socials > a {
+      font-size: 1em;
+    }
+    
+    .mypic {
+      height: 10em;
+      width: 10em;
+    }
+    
+    .mobileBreak {
+      display: block;
+    }
+    
+  }
