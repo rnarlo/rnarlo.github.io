@@ -275,11 +275,11 @@ ul {
 
 .mobileBreak {
   width: 45em;
-  max-width: 90vw;
+  max-width: 80vw;
   background-color: var(--text-one);
   opacity: 0.3;
   margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   display: none;
 }
 
