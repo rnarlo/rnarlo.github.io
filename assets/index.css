@@ -33,7 +33,8 @@ html {
   -o-background-size: cover;
   -o-tap-highlight-color: transparent;
   background-size: cover;
-  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -46,12 +47,20 @@ body {
   background-color: var(--background-color-one);
 }
 
+/* .footer {
+  width: 100%;
+  height: 8vh;
+  background-color: var(--background-color-two);
+  position: absolute;
+  bottom: 0;
+} */
+
 .break {
   flex-basis: 100%;
   height: 0;
 }
 
-.upper {
+.upper, .projects {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +68,12 @@ body {
   width: 100%;
   height: 100vh;
   margin-bottom: -1em;
+}
+
+.education, .footer {
+  box-shadow: 
+        inset 0px 8px 0.2em -8px #000,
+        inset 0px -8px 0.2em -8px #000; 
 }
 
 .mypic {
@@ -134,7 +149,7 @@ body {
 }
 
 .arrow {
-  margin-top: 8em;
+  margin-top: 5.5em;
   font-size: 1.8em;
   color: var(--aurora-three);
   animation: fade-in-d 2s infinite ease-in-out;
@@ -149,7 +164,7 @@ body {
   background-color: var(--background-color-two);
 }
 
-.education > h1 {
+.education > h1, .projects > h1 {
   text-align: center;
   width: auto;
   font-family: var(--font-fam-1);
@@ -157,7 +172,7 @@ body {
   font-size: calc(2em + 0.5vw);
 }
 
-.education > h1::after {
+.education > h1::after, .projects > h1::after {
   content: "";
   display: block;
   height: 1.2px;
@@ -166,7 +181,7 @@ body {
   width: 100%;
 }
 
-.aboutEdu {
+.aboutEdu, .projectsDescription {
   width: 45em;
   max-width: 90vw;
   color: var(--text-one);
@@ -183,6 +198,89 @@ body {
 
 .uplb {
   color: var(--aurora-three);
+}
+
+.projects {
+  /* border: 1px solid white; */
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projectsList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  height: 40vh;
+}
+
+.projectsList > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  height: auto;
+  width: calc(100%/3);
+  /* border: 1px solid white; */
+  flex: 30em;
+  overflow: hidden;
+}
+
+.projectsList > * > h2 {
+  font-family: var(--font-fam-1);
+  color: var(--aurora-three);
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+.aboutProject {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  max-width: 90vw;
+  color: var(--text-one);
+  font-family: var(--font-fam-3);
+  font-weight: lighter;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.link { 
+  width: auto;
+}
+
+.link > a {
+  text-decoration: none;
+  color: var(--aurora-three);
+}
+
+.link > a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: rgba(255,2555,255,0.6);
+  position: relative;
+  transition: all ease-in-out 300ms;
+  width: 0;
+}
+
+.mobileBreak {
+  width: 45em;
+  max-width: 90vw;
+  background-color: var(--text-one);
+  opacity: 0.3;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: none;
 }
 
 @-webkit-keyframes blink {
@@ -216,7 +314,7 @@ body {
 }
 
 @media (hover: hover) {
-  .socials > a:hover::after{
+  .socials > a:hover::after, .link > a:hover::after{
     width: 100%;
   }
   
@@ -244,6 +342,10 @@ body {
   .mypic {
     height: 10em;
     width: 10em;
+  }
+
+  .mobileBreak {
+    display: block;
   }
  
 }
