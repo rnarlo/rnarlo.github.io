@@ -74,8 +74,8 @@ body {
 
 .education, .footer {
   box-shadow: 
-  inset 0px 8px 0.35em -8px #000,
-  inset 0px -8px 0.35em -8px #000; 
+  inset 0px 8px 0.3em -8px #000,
+  inset 0px -8px 0.3em -8px #000; 
 }
 
 .mypic {
