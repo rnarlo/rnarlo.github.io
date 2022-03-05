@@ -129,6 +129,7 @@ body {
 
 .socials {
   display: inline-flex;
+  margin-top: 2em;
 }
 
 .socials > a {
