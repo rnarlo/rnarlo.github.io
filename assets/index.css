@@ -371,7 +371,7 @@ body {
   }
   
   /* For phones */
-  @media screen and (max-width: 890px) {    
+  @media screen and (max-width: 800px) {    
     .upper {
       margin-top: -3em;
       margin-bottom: 3em;
@@ -401,8 +401,30 @@ body {
     
   }
   
-  @media screen and (min-width: 891px, max-width: 1189px) /* tablet */ {
+  @media screen and (min-width: 801px) and (max-width: 1189px) /* tablet */ {
+
+    .upper {
+      margin-top: -0.9em;
+    }
     .arrow {
       display: none !important;
+    }
+
+    .name {
+      font-size: 3.5em;
+      margin-bottom: -3%;
+    }
+    
+    .socials > a {
+      font-size: 1.1em;
+    }
+    
+    .mypic {
+      height: 9em;
+      width: 9em;
+    }
+    
+    .mobileBreak {
+      display: block;
     }
   }
