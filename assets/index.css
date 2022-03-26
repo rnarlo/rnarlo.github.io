@@ -87,9 +87,14 @@ body {
   height: 0;
 }
 
+.upper {
+  justify-content: center;
+  margin-top: -6.2em;
+  margin-bottom: 6.2em;
+}
+
 .upper, .projects {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -103,8 +108,11 @@ body {
 }
 
 .mypic {
+  display: block;
+  position: relative;
+  top: -25%;
   height: 12rem;
-  width: 12rem;
+  width: auto;
   border-radius: 50%;
   border: 2px solid rgba(255,2555,255,0.5)
 }
@@ -113,9 +121,8 @@ body {
   font-family: var(--font-fam-3);
   color: var(--text-one);
   font-weight: bolder;
-  font-size: 6em;
+  font-size: 7em;
   animation-fill-mode: forwards;
-  margin-top: 0.65em;
 }
 
 .outline {
@@ -128,7 +135,7 @@ body {
 
 .socials {
   display: inline-flex;
-  margin-top: 2em;
+  margin-top: 0.6em;
 }
 
 .socials > a {
@@ -137,7 +144,7 @@ body {
   font-family: var(--font-fam-3);
   transition: 0.5s;
   color: var(--aurora-three);
-  font-size: 1.2em;
+  font-size: 1.618em;
   font-weight: normal;
 }
 
@@ -154,20 +161,18 @@ body {
 .about {
   display: flex;
   justify-content: center;
-  width: 45em;
-  max-width: 90vw;
+  /* padding-top: 6.5em; */
+  max-width: 80vw;
 }
 
 .typewrite {
+  position: absolute;
+  display: block;
   color: var(--text-one);
   text-decoration: none;
   font-size: 2em;
   font-family: var(--font-fam-1);
-  width: 45em;
-  max-width: 90vw;
   text-align: center;
-  font-weight: lighter;
-  position: absolute;
 }
 
 .typewrite > .wrap::after {
@@ -176,7 +181,9 @@ body {
 }
 
 .arrow {
-  margin-top: 5.5em;
+  display: block;
+  position: relative;
+  bottom: -18%;
   font-size: 1.8em;
   color: var(--aurora-three);
   animation: fade-in-d 2s infinite ease-in-out;
@@ -364,24 +371,38 @@ body {
   }
   
   /* For phones */
-  @media screen and (max-width: 1000px) {    
+  @media screen and (max-width: 890px) {    
+    .upper {
+      margin-top: -3em;
+      margin-bottom: 3em;
+    }
+
+    .arrow {
+      bottom: -25%;
+    }
+
     .name {
-      /* margin-top: 1.7em; */
-      margin-bottom: -0.3em;
-      font-size: 3em;
+      font-size: 3.5em;
+      margin-bottom: -3%;
     }
     
     .socials > a {
-      font-size: 1em;
+      font-size: 1.1em;
     }
     
     .mypic {
-      height: 10em;
-      width: 10em;
+      height: 9em;
+      width: 9em;
     }
     
     .mobileBreak {
       display: block;
     }
     
+  }
+  
+  @media screen and (min-width: 891px, max-width: 1189px) /* tablet */ {
+    .arrow {
+      display: none !important;
+    }
   }
