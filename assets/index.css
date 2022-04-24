@@ -162,7 +162,7 @@ body {
   display: flex;
   justify-content: center;
   /* padding-top: 6.5em; */
-  max-width: 80vw;
+  max-width: 90vw;
 }
 
 .typewrite {
