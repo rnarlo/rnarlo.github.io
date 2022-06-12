@@ -2,28 +2,22 @@
 
 @font-face {
   font-family: Titillium;
-  src: url("fonts/TitilliumWeb-Regular.ttf");
+  src: url('fonts/TitilliumWeb-Regular.ttf');
 }
 
 @font-face {
   font-family: DMMono;
-  src: url("fonts/DMMono-Regular.ttf");
+  src: url('fonts/DMMono-Regular.ttf');
 }
 
 :root {
-  --text-one: #ECEFF4;
-  --frost-one: #5E81AC;
-  --frost-two: #81A1C1;
-  --frost-three: #88C0D0;
-  --aurora-three: #BF616A;
-  --aurora-two: #D08770;
-  --aurora-one: #A3BE8C;
-  --background-color-one: #2E3440;
-  --background-color-two: #262C37;
-  --font-fam-1: "Titillium", sans-serif;
-  --font-fam-2: "DMMono", monospace;
-  --font-fam-3: "Inter", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --text-one: #eceff4;
+  --contrast: #a5c5e9;
+  --background-color-one: #121619;
+  --font-fam-1: 'Titillium', sans-serif;
+  --font-fam-2: 'DMMono', monospace;
+  --font-fam-3: 'Inter', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   /*Inter is from the Rhythm bot website. Huge thanks to them!*/
 }
 
@@ -93,7 +87,8 @@ body {
   margin-bottom: 6.2em;
 }
 
-.upper, .projects {
+.upper,
+.projects {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -101,10 +96,8 @@ body {
   height: 100vh;
 }
 
-.education, .footer {
-  box-shadow: 
-  inset 0px 6px 0.3em -8px #000,
-  inset 0px -6px 0.3em -8px #000; 
+.footer {
+  box-shadow: inset 0px 6px 0.3em -8px #000, inset 0px -6px 0.3em -8px #000;
 }
 
 .mypic {
@@ -114,7 +107,7 @@ body {
   height: 12rem;
   width: auto;
   border-radius: 50%;
-  border: 2px solid rgba(255,2555,255,0.5)
+  border: 2px solid rgba(255, 2555, 255, 0.5);
 }
 
 .name {
@@ -127,10 +120,8 @@ body {
 
 .outline {
   color: var(--background-color-one) !important;
-  text-shadow: -1px 1px 0 var(--aurora-three),
-  1px 1px 0 var(--aurora-three),
-  1px -1px 0 var(--aurora-three),
-  -1px -1px 0 var(--aurora-three);
+  text-shadow: -1px 1px 0 var(--contrast), 1px 1px 0 var(--contrast),
+    1px -1px 0 var(--contrast), -1px -1px 0 var(--contrast);
 }
 
 .socials {
@@ -143,16 +134,16 @@ body {
   text-decoration: none;
   font-family: var(--font-fam-3);
   transition: 0.5s;
-  color: var(--aurora-three);
+  color: var(--contrast);
   font-size: 1.618em;
   font-weight: normal;
 }
 
 .socials > a::after {
-  content: "";
+  content: '';
   display: block;
   height: 2px;
-  background-color: rgba(255,2555,255,0.6);
+  background-color: rgba(255, 2555, 255, 0.6);
   position: relative;
   transition: all ease-in-out 300ms;
   width: 0;
@@ -162,7 +153,7 @@ body {
   display: flex;
   justify-content: center;
   /* padding-top: 6.5em; */
-  max-width: 80vw;
+  max-width: 75vw;
 }
 
 .typewrite {
@@ -176,7 +167,7 @@ body {
 }
 
 .typewrite > .wrap::after {
-  content: "|";
+  content: '|';
   animation: blink 500ms linear infinite alternate;
 }
 
@@ -185,7 +176,7 @@ body {
   position: relative;
   bottom: -18%;
   font-size: 1.8em;
-  color: var(--aurora-three);
+  color: var(--contrast);
   animation: fade-in-d 2s infinite ease-in-out;
 }
 
@@ -193,238 +184,264 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
-  background-color: var(--background-color-two);
+  height: auto;
 }
 
-.education > h1, .projects > h1 {
-  text-align: center;
+.educDiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 54em;
+  max-width: 85vw;
+}
+
+.educDiv > h1,
+.projectsDiv > h1 {
   width: auto;
   font-family: var(--font-fam-1);
+  font-weight: lighter;
   color: var(--text-one);
   font-size: calc(2em + 0.5vw);
 }
 
-.education > h1 {
-    /* Code from Harvard! :)*/
-  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),color-stop(66%,rgba(255,255,255,0)),color-stop(66%,rgba(191, 97, 106, 0.6)),color-stop(85%,rgba(191, 97, 106, 0.6)),color-stop(85%,rgba(255,255,255,0)));
-}
-
-.projects > h1 {
+.educDiv > h1,
+.projectsDiv > h1 {
   /* Code from Harvard! :)*/
-  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),color-stop(66%,rgba(255,255,255,0)),color-stop(66%,rgba(163, 190, 140, 0.6)),color-stop(85%,rgba(163, 190, 140, 0.6)),color-stop(85%,rgba(255,255,255,0)));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 0)),
+    color-stop(66%, rgba(255, 255, 255, 0)),
+    color-stop(66%, rgba(165, 197, 233, 0.4)),
+    color-stop(85%, rgba(165, 197, 233, 0.4)),
+    color-stop(85%, rgba(255, 255, 255, 0))
+  );
+}
+.aboutEdu,
+.projectsDescription,
+.languages {
+  width: 45em;
+  max-width: 85vw;
+  color: var(--text-one);
+  font-family: var(--font-fam-3);
+  font-weight: normal;
+  font-size: 1.2em;
+  text-align: justify;
+  margin-top: -1.8em;
 }
 
-/* .education > h1::after, .projects > h1::after {
-  content: "";
+.aboutEdu > p > a {
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.uplb {
+  color: var(--contrast);
+}
+
+.projects {
+  /* border: 1px solid white; */
+  width: 100%;
+  height: auto;
+}
+
+.projectsDiv {
+  width: 54em;
+  max-width: 85vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projectsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5vh;
+}
+
+.projectsList > * {
+  height: auto;
+  width: 50em;
+  max-width: 80vw;
+  overflow: hidden;
+}
+
+.projectsList > * > h2 {
+  font-family: var(--font-fam-2);
+  color: var(--contrast) !important;
+  font-weight: normal;
+  font-size: 2.2em;
+}
+
+.aboutProject {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 85vw;
+  color: var(--text-one);
+  font-family: var(--font-fam-3);
+  font-weight: normal;
+  text-align: justify;
+  font-size: 1.2em;
+  margin-top: -1.8em;
+}
+
+.link {
+  width: auto;
+}
+
+.link > a {
+  text-decoration: none;
+  color: var(--contrast);
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.link > a::after {
+  content: '';
   display: block;
-  height: 9px;
-  background-color: rgba(255,2555,255,0.6);
+  height: 2px;
+  background-color: rgba(255, 2555, 255, 0.6);
   position: relative;
-  width: 100%; */
-  /* } */
-  
-  .aboutEdu, .projectsDescription {
-    width: 45em;
-    max-width: 90vw;
-    color: var(--text-one);
-    font-family: var(--font-fam-3);
-    font-weight: normal;
-    font-size: 1.2em;
-    text-align: center;
+  transition: all ease-in-out 300ms;
+  width: 0;
+}
+
+hr,
+.mobileBreak {
+  max-width: 85vw;
+  background-color: var(--text-one);
+  margin-top: 2.2em;
+  margin-bottom: 1em;
+}
+
+hr {
+  width: 54em;
+}
+
+.mobileBreak {
+  width: 45em;
+  opacity: 0.2;
+  display: none;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
   }
-  
-  .aboutEdu > p > a {
-    text-decoration: none;
-    transition: 300ms;
+  100% {
+    opacity: 1;
   }
-  
-  .uplb {
-    color: var(--aurora-three);
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
   }
-  
-  .projects {
-    /* border: 1px solid white; */
-    height: auto;
+  100% {
+    opacity: 1;
   }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
   }
-  
-  .projectsList {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    height: auto;
-    padding-bottom: 5vh;
+  100% {
+    opacity: 1;
   }
-  
-  .projectsList > * {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-start;
-    height: auto;
-    width: calc(100%/3);
-    /* border: 1px solid white; */
-    flex: 30em;
-    overflow: hidden;
+}
+
+@keyframes fade-in-d {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
   }
-  
-  .projectsList > * > h2 {
-    font-family: var(--font-fam-2);
-    color: var(--aurora-one) !important;
-    font-weight: normal;
-    font-size: 2.2em;
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 25%, 0);
   }
-  
-  .aboutProject {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    max-width: 90vw;
-    color: var(--text-one);
-    font-family: var(--font-fam-3);
-    font-weight: normal;
-    text-align: center;
-    font-size: 1.2em;
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
   }
-  
-  .link { 
-    width: auto;
+}
+
+@media (hover: hover) {
+  .socials > a:hover::after,
+  .link > a:hover::after {
+    width: 50%;
   }
-  
-  .link > a {
-    text-decoration: none;
-    color: var(--aurora-one);
-    opacity: 0.8;
-    font-weight: normal;
+
+  .aboutEdu > p > a:hover {
+    background-color: rgba(255, 255, 255, 0.03);
   }
-  
-  .link > a::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: rgba(255,2555,255,0.6);
-    position: relative;
-    transition: all ease-in-out 300ms;
-    width: 0;
+}
+
+/* For phones */
+@media screen and (max-width: 800px) {
+  .upper {
+    margin-top: -3em;
+    margin-bottom: 3em;
   }
-  
+
+  .arrow {
+    bottom: -25%;
+  }
+
+  .name {
+    font-size: 3.5em;
+    margin-bottom: -3%;
+  }
+
+  .socials > a {
+    font-size: 1.1em;
+  }
+
+  .mypic {
+    height: 9em;
+    width: 9em;
+  }
+
   .mobileBreak {
-    width: 45em;
-    max-width: 60vw;
-    background-color: var(--text-one);
-    opacity: 0.3;
-    margin-top: 2.2em;
-    margin-bottom: 1em;
-    display: none;
+    display: block;
   }
-  
-  @-webkit-keyframes blink {
-    0%{opacity: 0;};
-    100%{opacity: 1;};
-  }
-  
-  @-moz-keyframes blink {
-    0%{opacity: 0;};
-    100%{opacity: 1;};
-  }
-  
-  @keyframes blink {
-    0%{opacity: 0;};
-    100%{opacity: 1;};
-  }
-  
-  @keyframes fade-in-d {
-    0% {
-      opacity: 0;
-      transform: translate3d(0, 0, 0);
-    }
-    50% {
-      opacity: 1;
-      transform: translate3d(0, 25%, 0);
-    }
-    100% {
-      opacity: 0;
-      transform: translate3d(0, 50%, 0);
-    }
-  }
-  
-  @media (hover: hover) {
-    .socials > a:hover::after, .link > a:hover::after{
-      width: 100%;
-    }
-    
-    .aboutEdu > p > a:hover {
-      background-color: rgba(255,255,255,0.03);
-    }
-  }
-  
-  /* For phones */
-  @media screen and (max-width: 800px) {    
-    .upper {
-      margin-top: -3em;
-      margin-bottom: 3em;
-    }
+}
 
-    .arrow {
-      bottom: -25%;
-    }
-
-    .name {
-      font-size: 3.5em;
-      margin-bottom: -3%;
-    }
-    
-    .socials > a {
-      font-size: 1.1em;
-    }
-    
-    .mypic {
-      height: 9em;
-      width: 9em;
-    }
-    
-    .mobileBreak {
-      display: block;
-    }
-    
+@media screen and (min-width: 801px) and (max-width: 1189px) /* tablet */ {
+  .upper {
+    margin-top: -0.9em;
   }
-  
-  @media screen and (min-width: 801px) and (max-width: 1189px) /* tablet */ {
-
-    .upper {
-      margin-top: -0.9em;
-    }
-    .arrow {
-      display: none !important;
-    }
-
-    .name {
-      font-size: 3.5em;
-      margin-bottom: -3%;
-    }
-    
-    .socials > a {
-      font-size: 1.1em;
-    }
-    
-    .mypic {
-      height: 9em;
-      width: 9em;
-    }
-    
-    .mobileBreak {
-      display: block;
-    }
+  .arrow {
+    display: none !important;
   }
+
+  .name {
+    font-size: 3.5em;
+    margin-bottom: -3%;
+  }
+
+  .socials > a {
+    font-size: 1.1em;
+  }
+
+  .mypic {
+    height: 9em;
+    width: 9em;
+  }
+
+  .mobileBreak {
+    display: block;
+  }
+}
