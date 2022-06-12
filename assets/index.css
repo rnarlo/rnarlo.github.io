@@ -320,6 +320,7 @@ ul {
 
 hr,
 .mobileBreak {
+  height: 1px;
   max-width: 85vw;
   background-color: var(--text-one);
   margin-top: 2.2em;
@@ -328,6 +329,7 @@ hr,
 
 hr {
   width: 54em;
+  opacity: 0.5;
 }
 
 .mobileBreak {
