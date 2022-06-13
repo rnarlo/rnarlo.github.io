@@ -33,12 +33,17 @@ $(document).ready(function () {
         {
           scrollTop: $(hash).offset().top,
         },
-        800,
+        600,
         function () {
           // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash
         },
       )
     } // End if
+
+    $('.hamburger-list').removeClass('shown')
+    $('.hamburger-list').addClass('closed')
+    $('.hamburger-menu').addClass('shown')
+    $('.exit-menu').removeClass('shown')
   })
 })
