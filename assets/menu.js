@@ -7,15 +7,6 @@ $('.hamburger-menu').click(function (a) {
   $('.exit-menu').addClass('shown')
 })
 
-$('.exit-menu').click(function (a) {
-  event.preventDefault(a)
-
-  $('.hamburger-list').removeClass('shown')
-  $('.hamburger-list').addClass('closed')
-  $('.hamburger-menu').addClass('shown')
-  $('.exit-menu').removeClass('shown')
-})
-
 $(document).ready(function () {
   // Add smooth scrolling to all links
   $('a').on('click', function (event) {
@@ -46,4 +37,22 @@ $(document).ready(function () {
     $('.hamburger-menu').addClass('shown')
     $('.exit-menu').removeClass('shown')
   })
+})
+
+$('#toggle-light').click(function (a) {
+  if (this.checked) {
+    document.documentElement.style.setProperty(
+      '--background-color-one',
+      '#eceff4',
+    )
+    document.documentElement.style.setProperty('--contrast', '#17385E')
+    document.documentElement.style.setProperty('--text-one', '#121619')
+  } else {
+    document.documentElement.style.setProperty(
+      '--background-color-one',
+      '#121619',
+    )
+    document.documentElement.style.setProperty('--contrast', '#a5c5e9')
+    document.documentElement.style.setProperty('--text-one', '#eceff4')
+  }
 })

@@ -71,7 +71,8 @@ body {
   right: 3%;
 }
 
-.hamburger-list > a {
+.hamburger-list > a,
+.light-mode > a {
   font-family: var(--font-fam-2);
   color: var(--contrast);
   text-decoration: none;
@@ -199,7 +200,7 @@ body {
   content: '';
   display: block;
   height: 2px;
-  background-color: rgba(255, 2555, 255, 0.6);
+  background-color: var(--text-one);
   position: relative;
   transition: all ease-in-out 300ms;
   width: 0;
@@ -233,7 +234,7 @@ body {
   bottom: -18%;
   font-size: 1.8em;
   color: var(--contrast);
-  animation: fade-in-d 2s infinite ease-in-out;
+  animation: fade-out-d 2s infinite ease-in-out;
 }
 
 .education {
@@ -368,7 +369,7 @@ ul {
   content: '';
   display: block;
   height: 2px;
-  background-color: rgba(255, 2555, 255, 0.6);
+  background-color: var(--text-one);
   position: relative;
   transition: all ease-in-out 300ms;
   width: 0;
@@ -392,6 +393,62 @@ hr {
   width: 45em;
   opacity: 0.2;
   display: none;
+}
+
+.light-mode {
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+}
+
+.light-mode > a {
+  margin-top: 0.15em;
+  margin-right: 0.75em;
+}
+
+.light-pill input[type='checkbox'] {
+  display: none;
+}
+
+.light-pill input[type='checkbox'] + label {
+  display: block;
+  position: relative;
+  width: 3em;
+  height: 1.6em;
+  margin-bottom: 20px;
+  border-radius: 1em;
+  background: #f3f3f3;
+  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.light-pill input[type='checkbox'] + label:before {
+  content: '';
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 1em;
+  background: var(--background-color-one);
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0.2em;
+  top: 0.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.light-pill input[type='checkbox']:checked + label {
+  background: #17385e;
+}
+
+.light-pill input[type='checkbox']:checked + label:before {
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+  left: 1.6em;
 }
 
 @-webkit-keyframes blink {
@@ -462,6 +519,39 @@ hr {
   100% {
     opacity: 0;
     transform: translate3d(0, -3%, 0);
+  }
+}
+
+@keyframes fade-out-d {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 70%, 0);
+  }
+}
+
+@-webkit-keyframes fade-out-d {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 70%, 0);
+  }
+}
+
+@-moz-keyframes fade-out-d {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 70%, 0);
   }
 }
 
