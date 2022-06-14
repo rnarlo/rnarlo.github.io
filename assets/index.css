@@ -109,6 +109,11 @@ body {
   margin-right: 20px;
 }
 
+.hamburger-menu > a,
+.exit-menu > a {
+  cursor: pointer;
+}
+
 .footer {
   width: 100%;
   margin-left: auto;
