@@ -235,6 +235,8 @@ body {
   font-size: 1.8em;
   color: var(--contrast);
   animation: fade-out-d 2s infinite ease-in-out;
+  -moz-animation: fade-out-d 2s infinite ease-in-out;
+  -webkit-animation: fade-out-d 2s infinite ease-in-out;
 }
 
 .education {
