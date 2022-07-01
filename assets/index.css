@@ -71,7 +71,7 @@ body {
   right: 3%;
 }
 
-.hamburger-list > a,
+.test > a,
 .light-mode > a {
   font-family: var(--font-fam-2);
   color: var(--contrast);
@@ -110,7 +110,8 @@ body {
 }
 
 .hamburger-menu > a,
-.exit-menu > a {
+.exit-menu > a,
+.test > a {
   cursor: pointer;
 }
 
