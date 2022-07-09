@@ -10,6 +10,11 @@
   src: url('fonts/DMMono-Regular.ttf');
 }
 
+@font-face {
+  font-family: Nothing;
+  src: url('fonts/Nothing.ttf');
+}
+
 :root {
   --text-one: #eceff4;
   --contrast: #a5c5e9;
@@ -18,6 +23,7 @@
   --font-fam-2: 'DMMono', monospace;
   --font-fam-3: 'Inter', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --nothing: 'Nothing', monospace;
   /*Inter is from the Rhythm bot website. Huge thanks to them!*/
 }
 
