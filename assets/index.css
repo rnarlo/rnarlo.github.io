@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: Titillium;
-  src: url('fonts/TitilliumWeb-Regular.ttf');
+  src: url("fonts/TitilliumWeb-Regular.ttf");
 }
 
 @font-face {
   font-family: DMMono;
-  src: url('fonts/DMMono-Regular.ttf');
+  src: url("fonts/DMMono-Regular.ttf");
 }
 
 @font-face {
   font-family: Nothing;
-  src: url('fonts/Nothing.ttf');
+  src: url("fonts/Nothing.ttf");
 }
 
 :root {
   --text-one: #eceff4;
   --contrast: #a5c5e9;
   --background-color-one: #121619;
-  --font-fam-1: 'Titillium', sans-serif;
-  --font-fam-2: 'DMMono', monospace;
-  --font-fam-3: 'Inter', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --nothing: 'Nothing', monospace;
+  --font-fam-1: "Titillium", sans-serif;
+  --font-fam-2: "DMMono", monospace;
+  --font-fam-3: "Inter", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --nothing: "Nothing", monospace;
   /*Inter is from the Rhythm bot website. Huge thanks to them!*/
 }
 
@@ -131,7 +131,9 @@ body {
   padding-right: 20px;
   height: 8vh;
   background-color: var(--background-color-two);
-  box-shadow: inset 0px 6px 0.3em -8px #000, inset 0px -6px 0.3em -8px #000;
+  box-shadow:
+    inset 0px 6px 0.3em -8px #000,
+    inset 0px -6px 0.3em -8px #000;
 }
 
 .footer-content {
@@ -189,8 +191,11 @@ body {
 
 .outline {
   color: var(--background-color-one) !important;
-  text-shadow: -1px 1px 0 var(--contrast), 1px 1px 0 var(--contrast),
-    1px -1px 0 var(--contrast), -1px -1px 0 var(--contrast);
+  text-shadow:
+    -1px 1px 0 var(--contrast),
+    1px 1px 0 var(--contrast),
+    1px -1px 0 var(--contrast),
+    -1px -1px 0 var(--contrast);
 }
 
 .socials {
@@ -209,7 +214,7 @@ body {
 }
 
 .socials > a::after {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   background-color: var(--text-one);
@@ -236,7 +241,7 @@ body {
 }
 
 .typewrite > .wrap::after {
-  content: '|';
+  content: "|";
   animation: blink 500ms linear infinite alternate;
 }
 
@@ -380,7 +385,7 @@ ul {
 }
 
 .link > a::after {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   background-color: var(--text-one);
@@ -390,7 +395,7 @@ ul {
 }
 
 hr,
-.mobileBreak {
+.projectBreak {
   height: 1px;
   max-width: 85vw;
   background-color: var(--text-one);
@@ -403,10 +408,10 @@ hr {
   opacity: 0.5;
 }
 
-.mobileBreak {
+.projectBreak {
   width: 45em;
   opacity: 0.2;
-  display: none;
+  display: block;
 }
 
 .light-mode {
@@ -420,11 +425,11 @@ hr {
   margin-right: 0.75em;
 }
 
-.light-pill input[type='checkbox'] {
+.light-pill input[type="checkbox"] {
   display: none;
 }
 
-.light-pill input[type='checkbox'] + label {
+.light-pill input[type="checkbox"] + label {
   display: block;
   position: relative;
   width: 3em;
@@ -441,8 +446,8 @@ hr {
   transition: background 0.1s ease-in-out;
 }
 
-.light-pill input[type='checkbox'] + label:before {
-  content: '';
+.light-pill input[type="checkbox"] + label:before {
+  content: "";
   display: block;
   width: 1.2em;
   height: 1.2em;
@@ -456,11 +461,11 @@ hr {
   transition: all 0.2s ease-in-out;
 }
 
-.light-pill input[type='checkbox']:checked + label {
+.light-pill input[type="checkbox"]:checked + label {
   background: #17385e;
 }
 
-.light-pill input[type='checkbox']:checked + label:before {
+.light-pill input[type="checkbox"]:checked + label:before {
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
   left: 1.6em;
 }
@@ -626,10 +631,6 @@ hr {
     height: 9em;
     width: 9em;
   }
-
-  .mobileBreak {
-    display: block;
-  }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1189px) /* tablet */ {
@@ -652,9 +653,5 @@ hr {
   .mypic {
     height: 9em;
     width: 9em;
-  }
-
-  .mobileBreak {
-    display: block;
   }
 }
