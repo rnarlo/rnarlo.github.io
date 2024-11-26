@@ -189,6 +189,13 @@ body {
   animation-fill-mode: forwards;
 }
 
+.construction {
+  color: var(--text-one);
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+}
+
 .outline {
   color: var(--background-color-one) !important;
   text-shadow:
