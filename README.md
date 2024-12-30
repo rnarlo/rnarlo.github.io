@@ -2,7 +2,6 @@
   Hello there!
 </h1>
 <h3>
-  This is my personal blog
+  This is my old portfolio.
 <h3>
-  sorry for the billion commits. will remake this repository once i'm proud of it!
-  also, sorry for the unorganised and unoptimized code. will fix that too! :)
+I have officially moved to <a href="https://christopermarlo.dev">christopermarlo.dev</a>.
